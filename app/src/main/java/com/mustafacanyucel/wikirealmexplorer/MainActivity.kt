@@ -43,12 +43,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.mustafacanyucel.wikirealmexplorer.model.Category
 import com.mustafacanyucel.wikirealmexplorer.ui.theme.WikiRealmExplorerTheme
+import com.mustafacanyucel.wikirealmexplorer.viewmodel.MainViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,14 +65,10 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun WikiRealmExplorerApp() {
+fun WikiRealmExplorerApp(modifier: Modifier = Modifier,
+                         mainViewModel: MainViewModel by viewmodels()
+) {
 
-    Scaffold(modifier = Modifier.fillMaxSize(),
-        bottomBar = {
-            SearchBarWithAutocomplete(
-
-            ) { }
-        }
 
 }
 
