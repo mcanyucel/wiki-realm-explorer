@@ -1,7 +1,7 @@
-package com.mustafacanyucel.wikirealmexplorer.module
+package com.mustafacanyucel.wikirealmexplorer.di
 
 import com.mustafacanyucel.wikirealmexplorer.repository.IWikiRepository
-import com.mustafacanyucel.wikirealmexplorer.repository.implementation.MockWikiRepository
+import com.mustafacanyucel.wikirealmexplorer.repository.implementation.WikiRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -13,5 +13,5 @@ import javax.inject.Singleton
 abstract class WikiRepositoryModule {
     @Binds
     @Singleton
-    abstract fun bindWikiRepository(mockWikiRepository: MockWikiRepository): IWikiRepository
+    abstract fun bindWikiRepository(wikiRepository: WikiRepository): IWikiRepository
 }

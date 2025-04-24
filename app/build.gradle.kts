@@ -50,6 +50,10 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.hilt.android)
     implementation(libs.hilt.android.navigation.compose)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging.interceptor)
 
     ksp(libs.hilt.compiler)
     testImplementation(libs.junit)
