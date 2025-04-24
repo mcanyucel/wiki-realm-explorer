@@ -1,7 +1,7 @@
-package com.mustafacanyucel.wikirealmexplorer.service.implementation
+package com.mustafacanyucel.wikirealmexplorer.repository
 
 import com.mustafacanyucel.wikirealmexplorer.model.Category
 
-interface IWikiMedia {
+interface IWikiRepository {
     suspend fun getCategories(query: String): List<Category>
 }

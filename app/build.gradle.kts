@@ -49,6 +49,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.hilt.android)
+    implementation(libs.hilt.android.navigation.compose)
 
     ksp(libs.hilt.compiler)
     testImplementation(libs.junit)

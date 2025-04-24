@@ -1,10 +1,13 @@
-package com.mustafacanyucel.wikirealmexplorer.service.implementation
+package com.mustafacanyucel.wikirealmexplorer.repository.implementation
 
-import kotlinx.coroutines.delay
-import kotlin.random.Random
 import com.mustafacanyucel.wikirealmexplorer.model.Category
+import com.mustafacanyucel.wikirealmexplorer.repository.IWikiRepository
+import kotlinx.coroutines.delay
+import javax.inject.Inject
+import kotlin.random.Random
 
-class WikiMediaMockData : IWikiMedia {
+
+class MockWikiRepository @Inject constructor(): IWikiRepository {
     override suspend fun getCategories(query: String): List<Category> {
         // return a random number of strings starting with the given query
         delay(Random.nextLong(100, 700)) // Simulate HTTP API response time
